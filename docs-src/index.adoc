@@ -3,7 +3,7 @@
 :sectnums:
 
 This documentation is authored in AsciiDoc, with diagrams maintained as PlantUML source.
-Generated HTML is published from the tracked `docs/` directory.
+Generated HTML is committed to the tracked `docs/` directory.
 
 == Documentation system
 
@@ -12,16 +12,4 @@ The source files in `docs-src/` are the source of truth. Do not edit generated f
 
 == Generation flow
 
-[plantuml, generation-flow, svg]
-....
-@startuml
-rectangle "AsciiDoc\n docs-src/*.adoc" as adoc
-rectangle "PlantUML\n docs-src/diagrams/*.puml" as puml
-rectangle "Asciidoctor\n + diagram extension" as build
-folder "Generated HTML\n docs/" as output
-
-adoc --> build
-puml --> build
-build --> output
-@enduml
-....
+plantuml::diagrams/documentation-system.puml[format=svg]
