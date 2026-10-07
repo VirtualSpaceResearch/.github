@@ -1,0 +1,16 @@
+name: Build docs
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build html, pdf and docx in containers
+        run: ./build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: docs
+          path: build/
