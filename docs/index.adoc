@@ -1,0 +1,13 @@
+= VirtualSpaceResearch Document
+:data-uri:
+:imagesdir: diagrams
+
+== Introduction
+
+This is a placeholder document.
+
+== Diagram
+
+The diagram below is generated from `diagrams/overview.puml` and embedded as a data URI in the HTML output.
+
+image::overview.png[Overview diagram]
