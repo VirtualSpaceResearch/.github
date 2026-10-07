@@ -1,0 +1,10 @@
+@startuml
+rectangle "AsciiDoc sources" as adoc
+rectangle "PlantUML sources" as puml
+rectangle "Build" as build
+folder "Generated /docs" as docs
+
+adoc --> build
+puml --> build
+build --> docs
+@enduml
